@@ -1,0 +1,104 @@
+/* ---- CONFIGURACIÓN GENERAL ---- */
+* {
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; 
+    background-color: #1a2a4f; 
+    color: #FFFFFF;
+    min-height: 100vh;
+    overflow: hidden; 
+    position: relative; 
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ---- NAVEGACIÓN SUPERIOR (CON POSITION: ABSOLUTE) ---- */
+.main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 50px;
+}
+
+.logo {
+    position: absolute;
+    left: 50px;
+    top: 25px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-nav {
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%); 
+    top: 25px;
+}
+
+.main-nav a {
+    margin: 0 10px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ---- CONTENIDO PRINCIPAL (CON POSITION: ABSOLUTE) ---- */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    width: 40%;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 450px;
+}
+
+/* ---- NAVEGACIÓN LATERAL (CON POSITION: ABSOLUTE) ---- */
+.side-nav {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%); 
+}
+
+.side-nav a {
+    display: block; 
+    margin-bottom: 15px; 
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.side-nav a.active,
+.side-nav a:hover {
+    background-color: white;
+    color: black;
+}
