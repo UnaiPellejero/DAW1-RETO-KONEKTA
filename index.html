@@ -13,25 +13,159 @@
             K+
         </div>
         <nav class="main-nav">
-            <a href="#" class="active">Inicio</a>
-            <a href="#">Eventos</a>
-            <a href="#">Contacto</a>
+            <a href="index.html" class="active">Inicio</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="contacto.html">Contacto</a>
         </nav>
     </header>
 
-    <main class="hero-content">
-        <h1>Te damos la bienvenida a<br>Konekta+</h1>
-        <p>
-            Descubre las 4 conferencias semanales.
-            Consulta el programa e inscríbete fácilmente a las charlas que más te interesen.
-        </p>
-    </main>
+    <section id="inicio" class="hero-section">
+        <main class="hero-content">
+            <h1>Te damos la bienvenida a<br>Konekta+</h1>
+            <p>
+                Descubre las 4 conferencias semanales.
+                Consulta el programa e inscríbete fácilmente a las charlas que más te interesen.
+            </p>
+        </main>
+    </section>
+
+    <section id="que-hacemos" class="hero-section alt-bg">
+        <div class="video-background-container">
+            <video autoplay muted loop playsinline id="bg-video">
+                <source src="videos/VideoQueHacemos.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+        </div>
+
+        <div class="video-overlay"></div>
+
+        <main class="hero-content">
+            <h1>¿Qué Hacemos?</h1>
+            <p>
+                Facilitamos conexiones globales a través de eventos digitales
+                de alta calidad. Nuestra plataforma te permite
+                asistir, participar y aprender desde cualquier lugar del mundo.
+            </p>
+        </main>
+    </section>
+
+    <section id="quienes-somos" class="hero-section">
+        <main class="hero-content">
+            <h1>¿Quiénes Somos?</h1>
+            <p>
+                Somos un equipo de profesionales con pasión por la tecnología
+                y la educación, dedicados a romper las barreras geográficas
+                para el conocimiento.
+            </p>
+
+           <div class="video-container-centered">
+                <video autoplay muted loop playsinline>
+                    <source src="videos/Konekta+.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+            </div>
+        </main>
+    </section>
 
     <nav class="side-nav">
-        <a href="#" class="active">Inicio</a>
-        <a href="#">¿Que hacemos?</a>
-        <a href="#">Sobre nosotros</a>
+        <a href="#inicio" class="active">Inicio</a>
+        <a href="#que-hacemos">¿Que hacemos?</a>
+        <a href="#quienes-somos">Sobre nosotros</a>
     </nav>
 
+    <script>
+    //HECHO CON CHATGPT
+    // 1. Seleccionar todas las secciones y los enlaces del menú lateral
+    const sections = document.querySelectorAll('.hero-section');
+    const navLinks = document.querySelectorAll('.side-nav a');
+
+    // 2. Crear una función que se ejecute CADA VEZ que haces scroll
+    function changeNavOnScroll() {
+        let currentSectionId = '';
+
+        // 3. Revisar la posición de cada sección
+        sections.forEach(section => {
+            // getBoundingClientRect().top nos dice cuántos píxeles
+            // faltan para que la sección llegue al borde superior de la ventana.
+            const sectionTop = section.getBoundingClientRect().top;
+
+            // Si la sección está a 150px o menos de la parte de arriba,
+            // la consideramos la sección "actual".
+            if (sectionTop < 150) {
+                currentSectionId = section.getAttribute('id');
+            }
+        });
+
+        // 4. Actualizar la clase .active en los enlaces
+        navLinks.forEach(link => {
+            // Primero, le quitamos 'active' a todos
+            link.classList.remove('active');
+
+            // El href del enlace (ej: "#que-hacemos")
+            const linkHref = link.getAttribute('href');
+
+            // Si el href del enlace es igual al ID de la sección actual
+            // (añadiéndole el #), le ponemos la clase 'active'.
+            if (linkHref === '#' + currentSectionId) {
+                link.classList.add('active');
+            }
+        });
+
+        // Caso especial: si estamos muy arriba (antes de llegar a 150px de la primera),
+        // dejamos "Inicio" como activo.
+        if (window.scrollY < 200) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            document.querySelector('.side-nav a[href="#inicio"]').classList.add('active');
+        }
+    }
+
+    // 5. Decirle al navegador que ejecute esa función cada vez que se detecte scroll
+    window.addEventListener('scroll', changeNavOnScroll);
+</script>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3>CONTACTO</h3>
+                <p>
+                    +34 943 123 456<br>
+                    info@konekta.com<br>
+                    Calle Urbieta, 26<br>
+                    20006 Donostia, Gipuzkoa
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h3>ENLACES</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#quienes-somos">Sobre nosotros</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>REDES SOCIALES</h3>
+                <div class="social-icons-container">
+                    <a href="#" class="social-icon">
+                    <img src="img/logo-facebook.png" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-icon">
+                    <img src="img/logo-instagram.png" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-icon">
+                    <img src="img/logo-linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <p>Facebook, Instagram &amp; LinkedIn</p>
+            </div>
+
+        </div>
+
+        <div class="footer-copyright">
+            © 2025 Konekta+ | Todos los derechos reservados
+        </div>
+    </footer>
 </body>
 </html>

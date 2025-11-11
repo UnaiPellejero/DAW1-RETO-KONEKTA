@@ -1,0 +1,179 @@
+/* ---- BOTONES (Añadidos para que funcionen los enlaces) ---- */
+.btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 10px;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    display: inline-block; /* Para que los <a> se vean como botones */
+}
+
+.btn-primary {
+    background-color: white;
+    color: black;
+    transition: transform 0.3s;
+}
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+
+/* ---- CONTENEDOR GENERAL PARA PÁGINAS ---- */
+.page-content {
+    position: relative;
+    width: 70%;
+    margin-left: 15%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.page-content h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.page-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto 30px auto; /* Centra el párrafo */
+}
+
+
+/* ---- ESTILOS PARA PÁGINA DE EVENTOS ---- */
+.event-grid {
+    margin-top: 40px;
+    text-align: left; /* Alinea las tarjetas a la izquierda */
+}
+
+.event-card {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    width: 90%; /* Ocupa casi todo el ancho disponible */
+    margin: 20px auto; /* Centra las tarjetas y les da espacio */
+    display: block; /* Cada tarjeta en su propia línea */
+    min-height: 200px;
+    
+    /* Configuración para colocar la imagen y el texto lado a lado */
+    position: relative; 
+    padding: 20px; /* Relleno general para la tarjeta */
+    box-sizing: border-box; /* Incluye el padding en el ancho/alto */
+    overflow: hidden; /* Para contener las imágenes flotantes */
+}
+.event-image-container {
+    width: 35%; /* La imagen ocupará un 35% del ancho de la tarjeta */
+    height: 180px; /* Altura fija para las imágenes */
+    float: left; /* La imagen flota a la izquierda */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    overflow: hidden; /* Asegura que la imagen se ajuste al contenedor redondeado */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+.event-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta la imagen para que rellene el contenedor sin distorsionarse */
+    display: block; /* Elimina espacio extra debajo de la imagen */
+}
+.event-content-text {
+    /* El texto ocupa el espacio restante después de la imagen flotante */
+    overflow: hidden; /* Contiene el texto dentro del espacio disponible */
+    text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+}
+.event-card h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.event-card .event-info {
+    font-size: 16px;
+    font-weight: bold;
+    color: #88aaff; /* Un color azul claro para destacar */
+    margin-bottom: 12px;
+}
+
+.event-card p {
+    font-size: 16px;
+    max-width: 100%;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.event-card .btn {
+    margin-left: 0;
+}
+.event-card.reverse-layout .event-image-container {
+    float: right; /* La imagen flota a la derecha */
+    margin-left: 20px; /* Espacio entre el texto y la imagen */
+    margin-right: 0; /* Elimina el margen derecho si estaba presente */
+}
+
+/* ---- ESTILOS PARA FORMULARIOS (Contacto e Inscripción) ---- */
+.simple-form {
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: left; /* Alinea el texto del formulario a la izquierda */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block; /* Pone el label en su propia línea */
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.simple-form input[type="text"],
+.simple-form input[type="email"],
+.simple-form input[type="tel"],
+.simple-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.simple-form textarea {
+    min-height: 120px;
+}
+
+.simple-form .btn-primary {
+    width: 100%; /* El botón ocupa todo el ancho */
+    margin: 10px 0 0 0;
+    padding: 15px;
+    font-size: 18px;
+}
+
+/* Estilos para los checkboxes de inscripción */
+fieldset.form-group {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+}
+fieldset.form-group legend {
+    padding: 0 10px; /* Espacio alrededor del texto "legend" */
+    font-weight: bold;
+    font-size: 18px;
+}
+.checkbox-group {
+    margin-bottom: 12px;
+}
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: auto; /* Devuelve el tamaño normal al checkbox */
+    transform: scale(1.2); /* Los hace un poco más grandes */
+}
+.checkbox-group label {
+    display: inline-block; /* Pone el label al lado del checkbox */
+    font-weight: normal;
+}

@@ -1,6 +1,6 @@
 /* ---- CONFIGURACIÓN GENERAL ---- */
 * {
-    margin: 10px;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -10,8 +10,11 @@ body {
     background-color: #1a2a4f; 
     color: #FFFFFF;
     min-height: 100vh;
-    overflow: hidden; 
+    overflow-y: auto;
     position: relative; 
+}
+html {
+    scroll-behavior: smooth;
 }
 
 a {
@@ -19,13 +22,15 @@ a {
     color: white;
 }
 
-/* ---- NAVEGACIÓN SUPERIOR (CON POSITION: ABSOLUTE) ---- */
+/* ---- NAVEGACIÓN SUPERIOR  ---- */
 .main-header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 25px 50px;
+    background-color: #1a2a4f;
+    z-index: 100;
 }
 
 .logo {
@@ -53,16 +58,14 @@ a {
 
 .main-nav a.active,
 .main-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: grey;
 }
 
-/* ---- CONTENIDO PRINCIPAL (CON POSITION: ABSOLUTE) ---- */
+/* ---- CONTENIDO PRINCIPAL ---- */
 .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 15%;
-    transform: translateY(-50%);
-    width: 40%;
+    width: 60%;
+    position: relative;
+    z-index: 3;
 }
 
 .hero-content h1 {
@@ -81,10 +84,11 @@ a {
 
 /* ---- NAVEGACIÓN LATERAL (CON POSITION: ABSOLUTE) ---- */
 .side-nav {
-    position: absolute;
+    position: fixed;
     top: 50%;
     right: 50px;
     transform: translateY(-50%); 
+    z-index: 100;
 }
 
 .side-nav a {
@@ -101,4 +105,159 @@ a {
 .side-nav a:hover {
     background-color: white;
     color: black;
+}
+.hero-section {
+    height: 100vh; 
+    padding-left: 15%;
+    padding-top: 30vh; 
+    box-sizing: border-box; 
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section.alt-bg {
+    background-color: #2a3a5f;
+}
+
+/* ESTILO DEL FOOTER */
+
+.main-footer {
+    background-color: white; 
+    color: black; 
+    padding: 50px 0 20px 0;
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+    clear: both; 
+}
+
+.footer-container {
+    width: 80%; 
+    margin: 0 auto; 
+    overflow: hidden; 
+}
+
+.footer-col {
+    display: inline-block; 
+    width: 32%;            
+    vertical-align: top;   
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.footer-col h3 {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase; 
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.footer-col p, .footer-col li {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    color: grey; 
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul a {
+    color: grey;
+    text-decoration: none; 
+    transition: color 0.3s;
+}
+.footer-col ul a:hover {
+    color: #1a2a4f; 
+    text-decoration: underline;
+}
+
+.social-icons-container {
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 35px;  
+    height: 35px; 
+    border: 1px solid #555; 
+    border-radius: 4px;
+    text-decoration: none;
+    margin-right: 8px;
+    transition: background-color 0.3s, border-color 0.3s;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    display: block; 
+}
+
+.social-icon:hover img {
+    filter: invert(1);
+}
+.social-icon:hover {
+    background-color: #1a2a4f; 
+    color: white;
+    border-color: #1a2a4f;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+    color: #999; 
+    border-top: 1px solid #e9e9e9; 
+    padding-top: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* VIDEO */
+.video-background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 2;
+}
+
+.video-container-centered {
+    margin-top: 30px; 
+    width: 100%;
+}
+
+.video-container-centered video {
+    display: block;     
+    margin: 0 auto;
+    
+    width: 100%;        
+    max-width: 640px;  
+    
+    height: auto;       
+    border-radius: 10px; 
+    background-color: #000; 
 }

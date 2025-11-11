@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción - Konekta+</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-pages.css"> </head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            K+
+        </div>
+        <nav class="main-nav">
+            <a href="index.html">Inicio</a>
+            <a href="eventos.html" class="active">Eventos</a> <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <h1>Inscripción a Eventos</h1>
+        <p>Rellena tus datos y selecciona las charlas a las que quieres asistir.</p>
+
+        <form class="simple-form">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono (Opcional)</label>
+                <input type="tel" id="telefono" name="telefono">
+            </div>
+
+            <fieldset class="form-group">
+                <legend>¿A qué eventos quieres asistir?</legend>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="evento1" name="eventos" value="innovacion">
+                    <label for="evento1">Charla: Innovación Digital</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="evento2" name="eventos" value="productividad">
+                    <label for="evento2">Taller: Productividad Remota</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="evento3" name="eventos" value="sostenibilidad">
+                    <label for="evento3">Mesa Redonda: Sostenibilidad</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="evento4" name="eventos" value="keynote">
+                    <label for="evento4">Keynote: El Futuro de Konekta+</label>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary">Confirmar Inscripción</button>
+        </form>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3>CONTACTO</h3>
+                <p>
+                    +34 943 123 456<br>
+                    info@konekta.com<br>
+                    Calle Urbieta, 26<br>
+                    20006 Donostia, Gipuzkoa
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h3>ENLACES</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#quienes-somos">Sobre nosotros</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>REDES SOCIALES</h3>
+                <div class="social-icons-container">
+                    <a href="#" class="social-icon">
+                    <img src="img/logo-facebook.png" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-icon">
+                    <img src="img/logo-instagram.png" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-icon">
+                    <img src="img/logo-linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <p>Facebook, Instagram &amp; LinkedIn</p>
+            </div>
+
+        </div>
+
+        <div class="footer-copyright">
+            © 2025 Konekta+ | Todos los derechos reservados
+        </div>
+    </footer>
+</body>
+</html>
