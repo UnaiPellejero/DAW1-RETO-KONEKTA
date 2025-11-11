@@ -8,7 +8,7 @@
     margin-left: 10px;
     font-family: Arial, sans-serif;
     text-decoration: none;
-    display: inline-block; /* Para que los <a> se vean como botones */
+    display: inline-block;
 }
 
 .btn-primary {
@@ -41,48 +41,45 @@
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.8);
     max-width: 600px;
-    margin: 0 auto 30px auto; /* Centra el párrafo */
+    margin: 0 auto 30px auto;
 }
 
 
 /* ---- ESTILOS PARA PÁGINA DE EVENTOS ---- */
 .event-grid {
     margin-top: 40px;
-    text-align: left; /* Alinea las tarjetas a la izquierda */
+    text-align: left;
 }
 
 .event-card {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 15px;
-    width: 90%; /* Ocupa casi todo el ancho disponible */
-    margin: 20px auto; /* Centra las tarjetas y les da espacio */
-    display: block; /* Cada tarjeta en su propia línea */
+    width: 90%; 
+    margin: 20px auto; 
+    display: block; 
     min-height: 200px;
-    
-    /* Configuración para colocar la imagen y el texto lado a lado */
     position: relative; 
-    padding: 20px; /* Relleno general para la tarjeta */
-    box-sizing: border-box; /* Incluye el padding en el ancho/alto */
-    overflow: hidden; /* Para contener las imágenes flotantes */
+    padding: 20px; 
+    box-sizing: border-box; 
+    overflow: hidden; 
 }
 .event-image-container {
-    width: 35%; /* La imagen ocupará un 35% del ancho de la tarjeta */
-    height: 180px; /* Altura fija para las imágenes */
-    float: left; /* La imagen flota a la izquierda */
-    border-radius: 10px; /* Bordes redondeados para la imagen */
-    overflow: hidden; /* Asegura que la imagen se ajuste al contenedor redondeado */
-    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    width: 35%;
+    height: 180px; 
+    float: left; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    margin-right: 20px; 
 }
 .event-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Recorta la imagen para que rellene el contenedor sin distorsionarse */
-    display: block; /* Elimina espacio extra debajo de la imagen */
+    object-fit: cover;
+    display: block; 
 }
 .event-content-text {
-    /* El texto ocupa el espacio restante después de la imagen flotante */
-    overflow: hidden; /* Contiene el texto dentro del espacio disponible */
-    text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+    overflow: hidden; 
+    text-align: left;
 }
 .event-card h3 {
     font-size: 24px;
@@ -92,7 +89,7 @@
 .event-card .event-info {
     font-size: 16px;
     font-weight: bold;
-    color: #88aaff; /* Un color azul claro para destacar */
+    color: #88aaff;
     margin-bottom: 12px;
 }
 
@@ -107,16 +104,16 @@
     margin-left: 0;
 }
 .event-card.reverse-layout .event-image-container {
-    float: right; /* La imagen flota a la derecha */
-    margin-left: 20px; /* Espacio entre el texto y la imagen */
-    margin-right: 0; /* Elimina el margen derecho si estaba presente */
+    float: right; 
+    margin-left: 20px; 
+    margin-right: 0; 
 }
 
 /* ---- ESTILOS PARA FORMULARIOS (Contacto e Inscripción) ---- */
 .simple-form {
     max-width: 700px;
     margin: 40px auto;
-    text-align: left; /* Alinea el texto del formulario a la izquierda */
+    text-align: left;
 }
 
 .form-group {
@@ -124,7 +121,7 @@
 }
 
 .form-group label {
-    display: block; /* Pone el label en su propia línea */
+    display: block;
     margin-bottom: 8px;
     font-weight: bold;
 }
@@ -148,7 +145,7 @@
 }
 
 .simple-form .btn-primary {
-    width: 100%; /* El botón ocupa todo el ancho */
+    width: 100%; 
     margin: 10px 0 0 0;
     padding: 15px;
     font-size: 18px;
@@ -161,7 +158,7 @@ fieldset.form-group {
     padding: 20px;
 }
 fieldset.form-group legend {
-    padding: 0 10px; /* Espacio alrededor del texto "legend" */
+    padding: 0 10px;
     font-weight: bold;
     font-size: 18px;
 }
@@ -170,10 +167,10 @@ fieldset.form-group legend {
 }
 .checkbox-group input[type="checkbox"] {
     margin-right: 10px;
-    width: auto; /* Devuelve el tamaño normal al checkbox */
-    transform: scale(1.2); /* Los hace un poco más grandes */
+    width: auto; 
+    transform: scale(1.2); 
 }
 .checkbox-group label {
-    display: inline-block; /* Pone el label al lado del checkbox */
+    display: inline-block; 
     font-weight: normal;
 }
