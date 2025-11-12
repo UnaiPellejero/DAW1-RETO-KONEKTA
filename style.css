@@ -82,30 +82,6 @@ a {
     max-width: 450px;
 }
 
-/* ---- NAVEGACIÓN LATERAL (CON POSITION: ABSOLUTE) ---- */
-.side-nav {
-    position: fixed;
-    top: 50%;
-    right: 50px;
-    transform: translateY(-50%); 
-    z-index: 100;
-}
-
-.side-nav a {
-    display: block; 
-    margin-bottom: 15px; 
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 12px 24px;
-    border-radius: 30px;
-    font-weight: 500;
-    transition: all 0.3s;
-}
-
-.side-nav a.active,
-.side-nav a:hover {
-    background-color: white;
-    color: black;
-}
 .hero-section {
     height: 100vh; 
     padding-left: 15%;
@@ -245,19 +221,76 @@ a {
     z-index: 2;
 }
 
-.video-container-centered {
-    margin-top: 30px; 
+/* ---- ESTILOS DE LA PARRILA COMPACTA DE INICIO ---- */
+
+.service-grid-compact {
     width: 100%;
+    margin-top: 40px; 
+    text-align: center; 
 }
 
-.video-container-centered video {
-    display: block;     
-    margin: 0 auto;
+.service-card-compact {
+    display: inline-block; 
+    width: 30%;
+    margin: 5px; 
     
-    width: 100%;        
-    max-width: 640px;  
+    vertical-align: top; 
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid transparent; 
+    border-radius: 10px;
+    padding: 15px; 
+    text-align: left; 
     
-    height: auto;       
-    border-radius: 10px; 
-    background-color: #000; 
+    transition: all 0.3s ease;
+}
+
+.service-icon-compact {
+    width: 40px;  
+    height: 40px; 
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+.service-card-compact h3 {
+    font-size: 18px; 
+    margin-bottom: 5px;
+}
+
+.service-card-compact:hover {
+    transform: translateY(-3px); 
+    background-color: rgba(0, 0, 0, 0.4); 
+    border-color: rgba(255, 255, 255, 0.5); 
+}
+
+/* ---- ESTILOS PARA LA SECCIÓN "QUIÉNES SOMOS" ---- */
+
+.quienes-somos-text {
+    float: left; 
+    width: 55%;  
+    padding-right: 5%; 
+    box-sizing: border-box;
+}
+
+.quienes-somos-text p {
+    text-align: justify;
+}
+
+.quienes-somos-video {
+    float: right; 
+    width: 40%; 
+    margin-top: 150px;  
+}
+
+
+.quienes-somos-video video {
+    width: 200%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #000;
+    display: block; 
+}
+
+/* ---- SECCIÓN "que hacemos" ---- */
+#que-hacemos .hero-content p {
+    text-align: justify;
 }

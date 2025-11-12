@@ -26,6 +26,39 @@
                 Descubre las 4 conferencias semanales.
                 Consulta el programa e inscríbete fácilmente a las charlas que más te interesen.
             </p>
+            <div class="service-grid-compact">
+
+                <div class="service-card-compact">
+                    <img src="img/logo-cloud.png" alt="Icono de Cloud" class="service-icon-compact">
+                    <h3>Cloud</h3>
+                </div>
+
+                <div class="service-card-compact">
+                    <img src="img/logo-conferencias.jpg" alt="Icono de Conferencias" class="service-icon-compact">
+                    <h3>Conferencias</h3>
+                </div>
+
+                <div class="service-card-compact">
+                    <img src="img/logo-webapps.png" alt="Icono de Web Apps" class="service-icon-compact">
+                    <h3>Web Apps</h3>
+                </div>
+
+                <div class="service-card-compact">
+                    <img src="img/logo-automatizaciones.png" alt="Icono de Automatizaciones" class="service-icon-compact">
+                    <h3>Automatizaciones</h3>
+                </div>
+
+                <div class="service-card-compact">
+                    <img src="img/logo-ia.jpg" alt="Icono de IA" class="service-icon-compact">
+                    <h3>IA</h3>
+                </div>
+
+                <div class="service-card-compact">
+                    <img src="img/logo-analisis.png" alt="Icono de Analisis" class="service-icon-compact">
+                    <h3>Análisis</h3>
+                </div>
+
+            </div>
         </main>
     </section>
 
@@ -41,24 +74,30 @@
 
         <main class="hero-content">
             <h1>¿Qué Hacemos?</h1>
-            <p>
-                Facilitamos conexiones globales a través de eventos digitales
-                de alta calidad. Nuestra plataforma te permite
-                asistir, participar y aprender desde cualquier lugar del mundo.
+            <h3>Transformamos la manera en que el mundo conecta y aprende.</h3>
+            <p style="max-width: 600px;">
+                En Konekta+, vamos más allá de la simple transmisión. Creamos ecosistemas digitales completos para eventos, conferencias y formación.
+            </p>
+            <p style="max-width: 600px; margin-top: 15px;">
+                Nuestra plataforma integral te ofrece todo lo necesario para escalar tu impacto: desde una infraestructura <strong>Cloud</strong> robusta que garantiza una conexión estable, hasta <strong>Aplicaciones Web </strong> para la gestión de inscritos. Usamos <strong>IA</strong> para ofrecer traducciones en tiempo real y <strong>Análisis de Datos</strong> para que midas el éxito de cada ponencia.
             </p>
         </main>
     </section>
 
     <section id="quienes-somos" class="hero-section">
         <main class="hero-content">
-            <h1>¿Quiénes Somos?</h1>
-            <p>
-                Somos un equipo de profesionales con pasión por la tecnología
-                y la educación, dedicados a romper las barreras geográficas
-                para el conocimiento.
-            </p>
+            <div class="quienes-somos-text">
+                <h1>¿Quiénes Somos?</h1>
+                <p>
+                    Somos un equipo de profesionales con pasión por la tecnología
+                    y la educación. Nacimos de la convicción de que las mejores ideas merecen ser compartidas sin límites y que la tecnología es el puente para lograrlo.
+                </p>
 
-           <div class="video-container-centered">
+                <p style="margin-top: 15px;">
+                    Nuestra misión es democratizar el acceso al conocimiento de alta calidad. No somos solo un proveedor de software; somos tu socio estratégico. Nos dedicamos a entender tus objetivos para construir experiencias digitales que resuenen, eduquen e inspiren a tu audiencia, sin importar en qué parte del mundo se encuentre.
+                </p>
+            </div>
+           <div class="quienes-somos-video">
                 <video autoplay muted loop playsinline>
                     <source src="videos/Konekta+.mp4" type="video/mp4">
                     Tu navegador no soporta el video.
@@ -66,62 +105,6 @@
             </div>
         </main>
     </section>
-
-    <nav class="side-nav">
-        <a href="#inicio" class="active">Inicio</a>
-        <a href="#que-hacemos">¿Que hacemos?</a>
-        <a href="#quienes-somos">Sobre nosotros</a>
-    </nav>
-
-    <script>
-    //HECHO CON CHATGPT
-    // 1. Seleccionar todas las secciones y los enlaces del menú lateral
-    const sections = document.querySelectorAll('.hero-section');
-    const navLinks = document.querySelectorAll('.side-nav a');
-
-    // 2. Crear una función que se ejecute CADA VEZ que haces scroll
-    function changeNavOnScroll() {
-        let currentSectionId = '';
-
-        // 3. Revisar la posición de cada sección
-        sections.forEach(section => {
-            // getBoundingClientRect().top nos dice cuántos píxeles
-            // faltan para que la sección llegue al borde superior de la ventana.
-            const sectionTop = section.getBoundingClientRect().top;
-
-            // Si la sección está a 150px o menos de la parte de arriba,
-            // la consideramos la sección "actual".
-            if (sectionTop < 150) {
-                currentSectionId = section.getAttribute('id');
-            }
-        });
-
-        // 4. Actualizar la clase .active en los enlaces
-        navLinks.forEach(link => {
-            // Primero, le quitamos 'active' a todos
-            link.classList.remove('active');
-
-            // El href del enlace (ej: "#que-hacemos")
-            const linkHref = link.getAttribute('href');
-
-            // Si el href del enlace es igual al ID de la sección actual
-            // (añadiéndole el #), le ponemos la clase 'active'.
-            if (linkHref === '#' + currentSectionId) {
-                link.classList.add('active');
-            }
-        });
-
-        // Caso especial: si estamos muy arriba (antes de llegar a 150px de la primera),
-        // dejamos "Inicio" como activo.
-        if (window.scrollY < 200) {
-            navLinks.forEach(link => link.classList.remove('active'));
-            document.querySelector('.side-nav a[href="#inicio"]').classList.add('active');
-        }
-    }
-
-    // 5. Decirle al navegador que ejecute esa función cada vez que se detecte scroll
-    window.addEventListener('scroll', changeNavOnScroll);
-</script>
 
     <footer class="main-footer">
         <div class="footer-container">
